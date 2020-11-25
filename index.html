@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+    <title>Rockpaper</title>
+    <meta charset='UTF-8'></charset>
+</head>
+<body>
+    <script>
+        
+        function rockpaperscissors(move){
+            let computer_move = Math.floor(Math.random() * 4);
+            let player_move;
+
+            if (move.toUpperCase() == "ROCK"){
+                player_move = 1;
+            }
+            else if (move.toUpperCase() == "PAPER"){
+                player_move = 2;
+            }
+            else if (move.toUpperCase() == "SCISSORS"){
+                player_move = 3;
+            }
+            else{
+                console.log("Check your spelling! Input the correct words!")
+                clearTimeout();
+            }
+
+            if (player_move == 1 && computer_move == 2){
+                console.log("You lost! The computer chose paper!")
+                x = 'lose'
+                return(x)
+            }
+            else if (player_move == 1 && computer_move == 1){
+                console.log("You tie! The computer also chose rock!")
+                x = 'tie'
+                return(x);
+            }
+            else if (player_move == 1 && computer_move ==3){
+                console.log("You win! The computer chose scissors")
+                x = 'win'
+                return(x)
+                
+            }
+            else if (player_move ==2 && computer_move ==1){
+                console.log("You win! The computer chose rock!")
+                x = 'win'
+                return(x)
+            }
+            else if (player_move ==2 && computer_move ==2){
+                console.log("You tie! The computer also chose paper!")
+                x = 'tie'
+                return(x);
+            }
+            else if (player_move ==2 && computer_move==3){
+                console.log("You lose! The computer chose Scissors")
+                x = 'lose'
+                return(x)
+            }
+            else if (player_move ==3 && computer_move==1){
+                console.log("You lose! The comuter chose Rock!")
+                x = 'lose'
+                return(x)
+            }
+            else if (player_move ==3 && computer_move ==2){
+                console.log("You win! The computer chose paper!")
+                x = 'win'
+                return(x)
+            }
+            else if (player_move ==3 && computer_move==3){
+                consoe.log("You tie! The computer also chose scissors")
+                x = 'tie'
+                return(x);
+            }
+            else{
+            }
+
+    
+        }
+        function gamer(move){
+            const newplayer_move = move;
+            let i;
+            for (i = 0; i<=5; i++){
+                rockpaperscissors(newplayer_move);
+            }
+
+
+        }
+
+    </script>
+</body>
+</html>
