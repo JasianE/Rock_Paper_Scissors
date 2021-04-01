@@ -1,0 +1,13 @@
+#main-container{
+    height: 60em;
+    width: 100%;
+    background-color: lightblue;
+    text-align: center;
+}
+button{
+    padding: 2em;
+    margin: 2em;
+}
+h1{
+    font-size: 40;
+}
