@@ -1,1 +1,1 @@
-A console based version of rock paper scissors. 
+Browser based rock paper scissors, have fun!
