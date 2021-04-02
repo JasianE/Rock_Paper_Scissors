@@ -235,7 +235,7 @@ function rockMove(numberOfMoves){
             //Create the text
 
             let text = document.createElement('h1')
-            let text_words = document.createTextNode("Congratulations! You won the best out of" + numberOfMoves + " ... care for a rematch?")
+            let text_words = document.createTextNode("Congratulations! You won the best out of " + numberOfMoves + " ... care for a rematch?")
             text.appendChild(text_words)
 
             //Create Rematch button
