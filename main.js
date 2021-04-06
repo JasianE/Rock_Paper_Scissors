@@ -5,6 +5,8 @@
 //Finally, remove all elements, add a congratulations text to whoever won, and add a replay button
 //If replay button is clicked repeat
 
+"use strict"
+
 //Global Variables
 
 let computations = 0;
@@ -439,53 +441,40 @@ function rockPaperScissors(number){
 
     // Check and match player move with computers move
 
-    if (player_move == 1 && computer_move == 2){
-        console.log("You lost! The computer chose paper!")
-        return('lose')
-    }
-    else if (player_move == 1 && computer_move == 1){
-        console.log("You tie! The computer also chose rock!")
+    if(player_move === computer_move){
         return('tie');
     }
-    else if (player_move == 1 && computer_move ==3){
-        console.log("You win! The computer chose scissors")
-        return('win')
-        
+    else if(player_move === 1){
+        switch(computer_move){
+            case 2:
+                return ('lose')
+                break;
+            case 3:
+                return ('win')
+                break;
+        }
     }
-    else if (player_move ==2 && computer_move ==1){
-        console.log("You win! The computer chose rock!")
-        x = 'win'
-        return(x)
+    else if(player_move === 2){
+        switch(computer_move){
+            case 1:
+                return('win')
+                break;
+            case 3:
+                return('lose')
+                break;
+        }
     }
-    else if (player_move ==2 && computer_move ==2){
-        console.log("You tie! The computer also chose paper!")
-        x = 'tie'
-        return(x);
+    else if(player_move === 3){
+        switch(computer_move){
+            case 1:
+                return('lose')
+                break;
+            case 2: 
+                return('win')
+                break;
+        }
     }
-    else if (player_move ==2 && computer_move==3){
-        console.log("You lose! The computer chose Scissors")
-        x = 'lose'
-        return(x)
-    }
-    else if (player_move ==3 && computer_move==1){
-        console.log("You lose! The comuter chose Rock!")
-        x = 'lose'
-        return(x)
-    }
-    else if (player_move ==3 && computer_move ==2){
-        console.log("You win! The computer chose paper!")
-        x = 'win'
-        return(x)
-    }
-    else if (player_move ==3 && computer_move==3){
-        console.log("You tie! The computer also chose scissors")
-        x = 'tie'
-        return(x);
-    }
-    else{
-    }
-
-
+    
 }
 
 createButtons()
